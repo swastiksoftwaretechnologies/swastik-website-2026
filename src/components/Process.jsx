@@ -106,9 +106,11 @@ export default function Process() {
                   key={step.number}
                   className="relative grid grid-cols-[32px_1fr] gap-4 md:col-span-3 md:grid-cols-[1fr_72px_1fr] md:gap-8"
                 >
-                  {/* Step card */}
+                  {/* Step card
+                      Mobile: col 2 (the wide 1fr column), row 1
+                      Desktop: left or right column depending on side */}
                   <div
-                    className={`${isLeft ? 'md:col-start-1 md:flex md:justify-end' : 'md:col-start-3'}`}
+                    className={`col-start-2 row-start-1 ${isLeft ? 'md:col-start-1 md:flex md:justify-end' : 'md:col-start-3'}`}
                   >
                     <motion.article
                       initial={false}
@@ -118,7 +120,7 @@ export default function Process() {
                         filter: isActive ? 'blur(0px)' : 'blur(3px)',
                       }}
                       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                      className="inline-block max-w-md rounded-[1.75rem] border border-gray-200 bg-white/88 px-6 py-5 shadow-[0_18px_50px_rgba(15,23,42,0.05)] md:px-7 md:py-6"
+                      className="w-full rounded-[1.75rem] border border-gray-200 bg-white/88 px-6 py-5 shadow-[0_18px_50px_rgba(15,23,42,0.05)] md:inline-block md:w-auto md:max-w-md md:px-7 md:py-6"
                     >
                       <p className="text-sm font-semibold uppercase tracking-[0.22em] text-green-600">
                         Step {index + 1}
@@ -132,24 +134,24 @@ export default function Process() {
                     </motion.article>
                   </div>
 
-                  {/* Dot + connector */}
-                  <div className="relative md:col-start-2 md:flex md:items-center md:justify-center">
+                  {/* Dot + connector
+                      Mobile: col 1 (the 32px narrow column), row 1 — aligned with vertical line
+                      Desktop: centre column */}
+                  <div className="col-start-1 row-start-1 relative flex items-start pt-4 md:col-start-2 md:items-center md:justify-center md:pt-0">
 
                     {/* Mobile: tick from vertical line to card */}
                     <div
-                      className={`absolute left-[11px] top-1/2 block h-px w-6 -translate-y-1/2 transition-colors duration-500 md:hidden ${
+                      className={`absolute left-[11px] top-[1.35rem] block h-px w-6 transition-colors duration-500 md:hidden ${
                         isActive ? 'bg-green-500' : 'bg-gray-300'
                       }`}
                     />
 
-                    {/* Desktop: connector stub from dot edge toward the card.
-                        Positioned so it starts just outside the dot circle (14px radius)
-                        and extends 36px toward the card — clearly visible even when inactive. */}
+                    {/* Desktop: connector stub from dot edge toward the card */}
                     <div
                       className={`absolute top-1/2 hidden h-px w-9 -translate-y-1/2 transition-colors duration-500 md:block ${
                         isLeft
-                          ? 'right-[calc(50%+13px)]'   // extends leftward from dot edge
-                          : 'left-[calc(50%+13px)]'    // extends rightward from dot edge
+                          ? 'right-[calc(50%+13px)]'
+                          : 'left-[calc(50%+13px)]'
                       } ${isActive ? 'bg-green-500' : 'bg-gray-300'}`}
                     />
 
@@ -166,7 +168,7 @@ export default function Process() {
                           : '0 0 0 0 rgba(34,197,94,0)',
                       }}
                       transition={{ duration: 0.35, ease: 'easeOut' }}
-                      className="relative mt-1 h-7 w-7 rounded-full border-4 md:mt-0"
+                      className="relative h-7 w-7 shrink-0 rounded-full border-4 md:mt-0"
                     >
                       <motion.div
                         initial={false}
