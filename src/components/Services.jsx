@@ -45,7 +45,7 @@ function WorkflowMockup() {
 
 function MobileMockup() {
   return (
-    <div className="mx-auto flex w-[13rem] items-center justify-center rounded-[2rem] border border-gray-200 bg-white p-3 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
+    <div className="mx-auto flex w-[11.5rem] items-center justify-center rounded-[2rem] border border-gray-200 bg-white p-3 shadow-[0_20px_45px_rgba(15,23,42,0.08)] sm:w-[13rem]">
       <div className="w-full rounded-[1.4rem] bg-gray-950 p-2">
         <div className="rounded-[1.1rem] bg-white p-3">
           <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-gray-200" />
@@ -149,10 +149,10 @@ export default function Services() {
             splitType="chars"
             delay={25}
             duration={0.8}
-            className="mx-auto block text-4xl font-bold tracking-[-0.04em] text-gray-950 md:text-5xl"
+            className="mx-auto block text-[2.4rem] font-bold tracking-[-0.04em] text-gray-950 sm:text-4xl md:text-5xl"
           />
           <ScrollReveal className="mx-auto mt-6 max-w-3xl">
-            <p className="text-lg leading-8 text-gray-600">
+            <p className="text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
               Enterprise-grade architecture meets intuitive design. We deliver
               end-to-end solutions that modernize your technical foundation.
             </p>
@@ -170,7 +170,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.65, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="group flex min-h-[28rem] flex-col rounded-[2rem] border border-gray-200 bg-white/85 p-7 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_28px_80px_rgba(34,197,94,0.08)]"
+                className="group flex min-h-[24rem] flex-col rounded-[2rem] border border-gray-200 bg-white/85 p-5 shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_28px_80px_rgba(34,197,94,0.08)] sm:min-h-[28rem] sm:p-7"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-50 text-green-700 ring-1 ring-green-200">
@@ -182,10 +182,10 @@ export default function Services() {
                 </div>
 
                 <div className="mt-6">
-                  <h3 className="text-2xl font-semibold tracking-tight text-gray-950">
+                  <h3 className="text-[1.375rem] font-semibold tracking-tight text-gray-950 sm:text-2xl">
                     {service.title}
                   </h3>
-                  <p className="mt-3 max-w-xl text-base leading-7 text-gray-600">
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
                     {service.description}
                   </p>
                 </div>

@@ -56,15 +56,15 @@ export default function Hero() {
             </ShinyText>
           </motion.div>
 
-          <div className="max-w-3xl text-5xl font-extrabold tracking-[-0.04em] text-gray-950 md:text-6xl lg:text-7xl">
+          <div className="max-w-3xl text-[2.6rem] font-extrabold tracking-[-0.04em] text-gray-950 sm:text-5xl md:text-6xl lg:text-7xl">
             <BlurText
               text="We Build"
               delay={90}
               animateBy="words"
               stepDuration={0.28}
-              className="leading-[0.98]"
+              className="leading-[1.02]"
             />
-            <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-2 leading-[0.98]">
+            <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-2 leading-[1.02]">
               <motion.div
                 initial={{ opacity: 0, y: 18, filter: 'blur(10px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -78,7 +78,7 @@ export default function Hero() {
               delay={85}
               animateBy="words"
               stepDuration={0.28}
-              className="mt-1 leading-[0.98]"
+              className="mt-1 leading-[1.02]"
             />
           </div>
 
@@ -87,7 +87,7 @@ export default function Hero() {
             animate="visible"
             custom={0.8}
             variants={fadeUp}
-            className="mt-8 max-w-2xl text-lg leading-8 text-gray-600"
+            className="mt-8 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg sm:leading-8"
           >
             Samvat AI partners with forward-thinking companies to design, engineer,
             and scale high-performance digital products powered by modern technology and
@@ -103,14 +103,14 @@ export default function Hero() {
           >
             <Button
               onClick={openModal}
-              className="justify-center rounded-2xl px-7 py-4 text-base shadow-[0_18px_44px_rgba(34,197,94,0.22)]"
+              className="justify-center rounded-2xl px-6 py-3.5 text-base shadow-[0_18px_44px_rgba(34,197,94,0.22)] sm:px-7 sm:py-4"
             >
               Start Your Project <span aria-hidden="true">→</span>
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToId('projects')}
-              className="justify-center rounded-2xl bg-white/70 px-7 py-4 text-base backdrop-blur-sm"
+              className="justify-center rounded-2xl bg-white/70 px-6 py-3.5 text-base backdrop-blur-sm sm:px-7 sm:py-4"
             >
               View Our Work
             </Button>

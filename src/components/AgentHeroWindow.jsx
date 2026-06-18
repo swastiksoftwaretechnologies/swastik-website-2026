@@ -24,15 +24,15 @@ const JSON_LINES = [
 
 function TitleBar() {
   return (
-    <div className="flex shrink-0 items-center gap-2 border-b border-white/10 px-4 py-3">
-      <span className="h-3 w-3 rounded-full bg-red-500/70" />
-      <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
-      <span className="h-3 w-3 rounded-full bg-green-500/70" />
-      <span className="mx-2 h-4 w-px bg-white/15" />
-      <span className="flex-1 font-mono text-xs text-white/35">
+    <div className="flex shrink-0 items-center gap-1.5 border-b border-white/10 px-3 py-3 sm:gap-2 sm:px-4">
+      <span className="h-2.5 w-2.5 rounded-full bg-red-500/70 sm:h-3 sm:w-3" />
+      <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70 sm:h-3 sm:w-3" />
+      <span className="h-2.5 w-2.5 rounded-full bg-green-500/70 sm:h-3 sm:w-3" />
+      <span className="mx-1.5 h-4 w-px bg-white/15 sm:mx-2" />
+      <span className="min-w-0 flex-1 truncate font-mono text-[11px] text-white/35 sm:text-xs">
         samvat.ai / agent-console
       </span>
-      <span className="flex items-center gap-1.5">
+      <span className="flex shrink-0 items-center gap-1">
         <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
         <span className="text-[11px] font-medium text-green-400/80">Online</span>
       </span>
@@ -44,13 +44,13 @@ function TitleBar() {
 
 function AccountTable({ showRisk }) {
   return (
-    <div className="space-y-0.5 p-4">
+    <div className="space-y-0.5 p-3 sm:p-4">
       {/* Header */}
-      <div className="mb-2 grid grid-cols-[1fr_64px_56px_78px] gap-2 border-b border-white/8 pb-2 px-2">
+      <div className="mb-2 grid grid-cols-[minmax(0,1fr)_52px_46px_70px] gap-1.5 border-b border-white/8 px-1.5 pb-2 sm:grid-cols-[1fr_64px_56px_78px] sm:gap-2 sm:px-2">
         {['Account', 'Revenue', 'Δ QoQ', 'Status'].map((h) => (
           <span
             key={h}
-            className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/25"
+            className="text-[9px] font-semibold uppercase tracking-[0.12em] text-white/25 sm:text-[10px] sm:tracking-[0.14em]"
           >
             {h}
           </span>
@@ -61,22 +61,22 @@ function AccountTable({ showRisk }) {
       {ACCOUNTS.map((acc, i) => (
         <div
           key={acc.id}
-          className="grid grid-cols-[1fr_64px_56px_78px] gap-2 items-center rounded-lg px-2 py-2.5 transition-colors hover:bg-white/[0.03]"
+          className="grid grid-cols-[minmax(0,1fr)_52px_46px_70px] items-center gap-1.5 rounded-lg px-1.5 py-2.5 transition-colors hover:bg-white/[0.03] sm:grid-cols-[1fr_64px_56px_78px] sm:gap-2 sm:px-2"
         >
           {/* Name */}
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/8 text-[9px] font-bold text-white/45">
+          <div className="flex min-w-0 items-center gap-2 sm:gap-2.5">
+            <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-white/8 text-[8px] font-bold text-white/45 sm:h-6 sm:w-6 sm:text-[9px]">
               {acc.name.slice(0, 2).toUpperCase()}
             </div>
-            <span className="truncate text-xs font-medium text-white/72">{acc.name}</span>
+            <span className="truncate text-[11px] font-medium text-white/72 sm:text-xs">{acc.name}</span>
           </div>
 
           {/* Revenue */}
-          <span className="font-mono text-xs text-white/50">{acc.revenue}</span>
+          <span className="font-mono text-[11px] text-white/50 sm:text-xs">{acc.revenue}</span>
 
           {/* Delta */}
           <span
-            className={`font-mono text-xs font-semibold ${
+            className={`font-mono text-[11px] font-semibold sm:text-xs ${
               acc.delta.startsWith('−') ? 'text-red-400' : 'text-emerald-400'
             }`}
           >
@@ -98,7 +98,7 @@ function AccountTable({ showRisk }) {
                       delay: i * 0.1,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="absolute inset-0 flex items-center justify-center rounded-md border border-red-500/30 bg-red-500/12 text-[10px] font-semibold text-red-400"
+                    className="absolute inset-0 flex items-center justify-center rounded-md border border-red-500/30 bg-red-500/12 px-1 text-[9px] font-semibold text-red-400 sm:text-[10px]"
                   >
                     ⚠ At Risk
                   </motion.span>
@@ -109,7 +109,7 @@ function AccountTable({ showRisk }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.25, delay: i * 0.07 }}
-                    className="absolute inset-0 flex items-center justify-center rounded-md border border-emerald-500/20 bg-emerald-500/8 text-[10px] font-semibold text-emerald-400"
+                    className="absolute inset-0 flex items-center justify-center rounded-md border border-emerald-500/20 bg-emerald-500/8 px-1 text-[9px] font-semibold text-emerald-400 sm:text-[10px]"
                   >
                     ✓ OK
                   </motion.span>
@@ -121,7 +121,7 @@ function AccountTable({ showRisk }) {
                   animate={{ opacity: 0.3 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute inset-0 flex items-center justify-center text-[10px] text-white/40"
+                className="absolute inset-0 flex items-center justify-center text-[9px] text-white/40 sm:text-[10px]"
                 >
                   —
                 </motion.span>
@@ -376,12 +376,12 @@ export default function AgentHeroWindow() {
   }, [state])
 
   return (
-    <div className="relative mx-auto w-full max-w-lg">
+    <div className="relative mx-auto w-full max-w-[22rem] sm:max-w-lg">
       {/* Ambient glow behind the window */}
       <div className="absolute inset-0 scale-110 rounded-3xl bg-green-500/8 blur-3xl" />
 
       {/* Window */}
-      <div className="relative flex h-[480px] flex-col overflow-hidden rounded-2xl border border-white/[0.1] bg-[#080d16] shadow-[0_32px_80px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.05)]">
+      <div className="relative flex h-[430px] flex-col overflow-hidden rounded-2xl border border-white/[0.1] bg-[#080d16] shadow-[0_32px_80px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.05)] sm:h-[480px]">
         {/* Subtle green top-glow inside the window */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-green-500/6 to-transparent" />
 
@@ -400,7 +400,7 @@ export default function AgentHeroWindow() {
       </div>
 
       {/* Floating status badge */}
-      <div className="absolute -bottom-3 -right-3 flex items-center gap-2 rounded-xl border border-white/10 bg-[#080d16] px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
+      <div className="absolute bottom-3 right-3 flex items-center gap-2 rounded-xl border border-white/10 bg-[#080d16] px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.4)] sm:-bottom-3 sm:-right-3">
         <span className="h-2 w-2 animate-pulse rounded-full bg-green-500 shadow-[0_0_6px_rgba(34,197,94,0.6)]" />
         <span className="text-xs font-medium text-white/50">Agent online</span>
       </div>
