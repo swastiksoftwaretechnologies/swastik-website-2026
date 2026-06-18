@@ -90,10 +90,10 @@ export default function Testimonials() {
           </div>
 
           {/* Right column — CardSwap */}
-          <div className="relative flex flex-1 items-center justify-center">
-            <div className="relative h-[380px] w-full max-w-[500px] sm:h-[420px]">
+          <div className="relative flex w-full flex-1 items-center justify-center overflow-hidden lg:overflow-visible">
+            <div className="relative h-[380px] w-full max-w-[420px] sm:h-[420px]">
               <CardSwap
-                containerClass="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 perspective-[900px] overflow-visible origin-center max-[480px]:scale-[0.8]"
+                containerClass="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 perspective-[900px] overflow-visible origin-center scale-[0.82] sm:scale-90 lg:scale-100"
                 width={420}
                 height={270}
                 cardDistance={50}

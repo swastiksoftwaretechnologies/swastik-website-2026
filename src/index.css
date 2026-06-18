@@ -13,6 +13,7 @@ button {
 
 html {
   scroll-behavior: auto; /* Lenis handles smooth scroll */
+  overflow-x: hidden;    /* Prevent horizontal scroll on iOS Safari (body alone is not enough) */
 }
 
 body {
