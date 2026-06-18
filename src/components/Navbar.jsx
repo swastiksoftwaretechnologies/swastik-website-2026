@@ -66,7 +66,7 @@ export default function Navbar() {
               <span className="h-3 w-3 rounded-full bg-green-500 shadow-[0_0_20px_rgba(34,197,94,0.6)]" />
             </span>
             <span className="text-xl font-semibold tracking-tight text-gray-900">
-              NovaMind AI
+              Samvat AI
             </span>
           </button>
 

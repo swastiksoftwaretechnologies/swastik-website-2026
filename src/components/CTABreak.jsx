@@ -8,7 +8,7 @@ const variants = {
   mid: {
     headline: "Let's Build Your Next Big Idea",
     subtext:
-      'Stop letting technical debt dictate your growth. Partner with NovaMind AI to engineer solutions that scale.',
+      'Stop letting technical debt dictate your growth. Partner with Samvat AI to engineer solutions that scale.',
     glow: false,
   },
   final: {

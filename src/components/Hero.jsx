@@ -89,7 +89,7 @@ export default function Hero() {
             variants={fadeUp}
             className="mt-8 max-w-2xl text-lg leading-8 text-gray-600"
           >
-            NovaMind AI partners with forward-thinking companies to design, engineer,
+            Samvat AI partners with forward-thinking companies to design, engineer,
             and scale high-performance digital products powered by modern technology and
             artificial intelligence.
           </motion.p>

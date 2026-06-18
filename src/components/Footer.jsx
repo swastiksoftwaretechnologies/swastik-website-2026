@@ -71,7 +71,7 @@ export default function Footer() {
                 <span className="h-3 w-3 rounded-full bg-green-500 shadow-[0_0_16px_rgba(34,197,94,0.5)]" />
               </span>
               <span className="text-xl font-semibold tracking-tight text-gray-900">
-                NovaMind AI
+                Samvat AI
               </span>
             </button>
 
@@ -194,7 +194,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="mt-12 border-t border-gray-200 py-6">
           <div className="flex flex-col items-center justify-between gap-4 text-xs text-gray-400 sm:flex-row">
-            <p>© 2026 NovaMind AI. All rights reserved.</p>
+            <p>© 2026 Samvat AI. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
               {legalLinks.map(({ label, href }) => (
                 <a

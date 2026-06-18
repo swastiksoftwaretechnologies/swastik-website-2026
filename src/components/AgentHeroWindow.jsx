@@ -30,7 +30,7 @@ function TitleBar() {
       <span className="h-3 w-3 rounded-full bg-green-500/70" />
       <span className="mx-2 h-4 w-px bg-white/15" />
       <span className="flex-1 font-mono text-xs text-white/35">
-        novamind.ai / agent-console
+        samvat.ai / agent-console
       </span>
       <span className="flex items-center gap-1.5">
         <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />

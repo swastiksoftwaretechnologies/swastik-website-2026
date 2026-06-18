@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     quote:
-      'NovaMind transformed our raw data into a strategic asset. The clarity of the insights they delivered is unparalleled — we made our best product decisions in years within weeks of launch.',
+      'Samvat transformed our raw data into a strategic asset. The clarity of the insights they delivered is unparalleled — we made our best product decisions in years within weeks of launch.',
     name: 'Alex Chen',
     role: 'Chief Data Officer',
     company: 'FinTech Corp',
