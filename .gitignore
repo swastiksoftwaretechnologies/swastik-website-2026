@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vite cache
+.vite/
+
+# Internal / dev-only files
+reference-images/
+prompts.txt
+IMPLEMENTATION-GUIDE.md

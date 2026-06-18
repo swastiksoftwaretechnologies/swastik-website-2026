@@ -1,0 +1,76 @@
+export const techTabs = [
+  {
+    id: 'frontend',
+    label: 'Frontend',
+    icon: 'Monitor',
+    techs: [
+      { name: 'React', icon: 'Atom' },
+      { name: 'Next.js', icon: 'Triangle' },
+      { name: 'TypeScript', icon: 'FileCode' },
+      { name: 'Tailwind CSS', icon: 'Wind' },
+      { name: 'Vue.js', icon: 'Layers' },
+      { name: 'Angular', icon: 'Shield' },
+    ],
+  },
+  {
+    id: 'backend',
+    label: 'Backend',
+    icon: 'Server',
+    techs: [
+      { name: 'Node.js', icon: 'Circle' },
+      { name: 'Python', icon: 'Snake' },
+      { name: 'FastAPI', icon: 'Zap' },
+      { name: 'Spring Boot', icon: 'Leaf' },
+      { name: 'Go', icon: 'ArrowRight' },
+      { name: 'PostgreSQL', icon: 'Database' },
+    ],
+  },
+  {
+    id: 'mobile',
+    label: 'Mobile',
+    icon: 'Smartphone',
+    techs: [
+      { name: 'React Native', icon: 'Atom' },
+      { name: 'Flutter', icon: 'Wind' },
+      { name: 'Swift', icon: 'Apple' },
+      { name: 'Kotlin', icon: 'Code2' },
+    ],
+  },
+  {
+    id: 'cloud',
+    label: 'Cloud',
+    icon: 'Cloud',
+    techs: [
+      { name: 'AWS', icon: 'Cloud' },
+      { name: 'Google Cloud', icon: 'Globe' },
+      { name: 'Azure', icon: 'CloudSnow' },
+      { name: 'Docker', icon: 'Box' },
+      { name: 'Kubernetes', icon: 'Network' },
+    ],
+  },
+  {
+    id: 'devops',
+    label: 'DevOps',
+    icon: 'GitBranch',
+    techs: [
+      { name: 'GitHub Actions', icon: 'GitBranch' },
+      { name: 'Jenkins', icon: 'Settings' },
+      { name: 'Terraform', icon: 'Layers' },
+      { name: 'Ansible', icon: 'Terminal' },
+      { name: 'Prometheus', icon: 'Activity' },
+    ],
+  },
+  {
+    id: 'ai-ml',
+    label: 'AI & ML',
+    icon: 'Brain',
+    techs: [
+      { name: 'PyTorch', icon: 'Flame' },
+      { name: 'TensorFlow', icon: 'Cpu' },
+      { name: 'LangChain', icon: 'Link' },
+      { name: 'OpenAI', icon: 'Sparkles' },
+      { name: 'Hugging Face', icon: 'Heart' },
+      { name: 'scikit-learn', icon: 'BarChart2' },
+    ],
+  },
+]
