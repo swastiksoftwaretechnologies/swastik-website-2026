@@ -1,38 +1,38 @@
 export const benefits = [
   {
-    icon: 'Zap',
-    title: 'Speed & Efficiency',
+    icon: 'Network',
+    title: 'Systems Thinking',
     description:
-      'Rapid development cycles with AI-accelerated workflows that cut time-to-market in half.',
-  },
-  {
-    icon: 'Maximize2',
-    title: 'Scalable Architecture',
-    description:
-      'Systems designed to grow with your business, from startup to enterprise scale without re-engineering.',
-  },
-  {
-    icon: 'PiggyBank',
-    title: 'Cost Optimization',
-    description:
-      'AI-driven automation that reduces operational costs while increasing output quality and throughput.',
+      'Experience with distributed systems, high-throughput pipelines, microservices, testing and reliability informs how the AI product is engineered.',
   },
   {
     icon: 'Lightbulb',
-    title: 'Smart Insights',
+    title: 'Research + Product',
     description:
-      'Turn raw data into strategic decisions with predictive analytics and real-time dashboards.',
+      'Multimodal and information-retrieval research translates into practical RAG, ranking, evaluation and model-quality decisions.',
   },
   {
-    icon: 'Headphones',
-    title: 'Dedicated Support',
+    icon: 'UserRound',
+    title: 'Founder-Level Attention',
     description:
-      'A committed team that treats your product as their own, with round-the-clock availability.',
+      'The person you speak with about the use case stays close to architecture and delivery instead of handing it off through layers.',
   },
   {
-    icon: 'Shield',
-    title: 'Enterprise Security',
+    icon: 'Workflow',
+    title: 'Workflow First',
     description:
-      'Bank-grade security practices with SOC 2 compliance-ready infrastructure and zero-trust architecture.',
+      'We start from the expensive human workflow, then decide where retrieval, agents, automation or traditional software create the most leverage.',
+  },
+  {
+    icon: 'Gauge',
+    title: 'Measurable Quality',
+    description:
+      'Evaluation is designed into the product - rubric scoring, retrieval quality, test coverage, latency, reliability or workflow completion.',
+  },
+  {
+    icon: 'Plug',
+    title: 'Built to Integrate',
+    description:
+      'Custom AI is useful only when it can work with your data and systems. APIs, auth, cloud infrastructure and operational constraints are part of the design.',
   },
 ]

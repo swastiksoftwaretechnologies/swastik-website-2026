@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+#root {
+  min-width: 0;
+}
+
 
 /* ─── Ambient green glow ─── */
 .ambient-glow {

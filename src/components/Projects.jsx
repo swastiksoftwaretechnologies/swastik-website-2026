@@ -10,14 +10,15 @@ export default function Projects() {
   const selectedProject = projects.find((project) => project.id === selectedProjectId) || null
 
   return (
-    <section id="projects" className="relative px-4 py-20 md:px-6 md:py-28">
+    <section id="projects" aria-labelledby="projects-heading" className="relative px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-green-600">
-            Featured Projects
+            Selected work
           </p>
           <SplitText
-            text="Interactive Product Deep-Dives"
+            id="projects-heading"
+            text="Different industries. Same job: make AI useful in production."
             tag="h2"
             splitType="chars"
             delay={16}
@@ -25,8 +26,7 @@ export default function Projects() {
             className="mx-auto block text-4xl font-bold tracking-[-0.04em] text-gray-950 md:text-5xl lg:text-6xl"
           />
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-            Explore how we design intelligent systems, ship high-leverage products,
-            and measure real business impact across healthcare, analytics, and logistics.
+            Each case study shows the same core ability from a different angle - understand a difficult workflow, design the AI layer, engineer the surrounding product and deliver something real teams can use.
           </p>
         </div>
 

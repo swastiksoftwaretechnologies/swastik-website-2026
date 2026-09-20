@@ -7,7 +7,6 @@ import {
   CloudSnow, Box, Network, Terminal, Activity, Flame, Cpu,
   Link, Sparkles, HeartHandshake, BarChart3,
 } from 'lucide-react'
-import CountUp from './animations/CountUp'
 import SplitText from './animations/SplitText'
 import { ScrollReveal } from './ui/ScrollReveal'
 import { techTabs } from '../data/techStack'
@@ -64,19 +63,19 @@ function TechCard({ tech, index }) {
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
         style={{ rotateX, rotateY, scale, transformStyle: 'preserve-3d' }}
-        className="rounded-[1.6rem] border border-gray-200 bg-white p-5 shadow-sm"
+        className="flex min-h-32 flex-col rounded-[1.25rem] border border-gray-200 bg-white p-3.5 shadow-sm transition-shadow duration-300 hover:shadow-[0_16px_34px_rgba(34,197,94,0.1)] sm:min-h-[8.5rem] sm:rounded-[1.45rem] sm:p-4"
       >
         {/* Icon floats forward in Z space */}
         <div
           style={{ transform: 'translateZ(24px)' }}
-          className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-green-50 to-slate-50 text-green-700 ring-1 ring-gray-200"
+          className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-green-50 to-slate-50 text-green-700 ring-1 ring-gray-200"
         >
           <TechIcon size={24} />
         </div>
         {/* Name sits slightly behind the icon */}
         <p
           style={{ transform: 'translateZ(12px)' }}
-          className="mt-6 text-lg font-semibold tracking-tight text-gray-900"
+          className="mt-auto pt-4 text-sm font-semibold leading-snug tracking-tight text-gray-900 sm:pt-5 sm:text-[0.95rem]"
         >
           {tech.name}
         </p>
@@ -90,14 +89,15 @@ export default function TechStack() {
   const ActiveTabIcon = resolveIcon(activeTab.icon)
 
   return (
-    <section id="tech-stack" className="relative px-4 py-20 md:px-6 md:py-28">
+    <section id="tech-stack" aria-labelledby="tech-stack-heading" className="relative px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-green-600">
-            Tech Stack
+            Tech stack
           </p>
           <SplitText
-            text="We Build with Modern Technology"
+            id="tech-stack-heading"
+            text="Research-grade AI. Production-grade software."
             tag="h2"
             splitType="chars"
             delay={18}
@@ -106,30 +106,13 @@ export default function TechStack() {
           />
           <ScrollReveal className="mx-auto mt-6 max-w-3xl">
             <p className="text-lg leading-8 text-gray-600">
-              From front-end frameworks to cloud infrastructure, we use the right
-              tools to deliver fast, scalable, and future-proof solutions.
+              A focused stack backed by product and engineering experience - selected for the workflow, not a wall of fashionable logos.
             </p>
           </ScrollReveal>
         </div>
 
-        <ScrollReveal className="mt-10 flex justify-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-gray-200 bg-white/80 px-6 py-4 text-sm font-medium text-gray-500 shadow-sm backdrop-blur-sm">
-            <span className="text-gray-700">
-              <CountUp to={30} className="font-semibold text-green-600" />+ Technologies
-            </span>
-            <span className="hidden h-1 w-1 rounded-full bg-gray-300 md:block" />
-            <span className="text-gray-700">
-              <CountUp to={6} className="font-semibold text-green-600" /> Categories
-            </span>
-            <span className="hidden h-1 w-1 rounded-full bg-gray-300 md:block" />
-            <span className="text-gray-700">
-              <CountUp to={5} className="font-semibold text-green-600" />+ Years Experience
-            </span>
-          </div>
-        </ScrollReveal>
-
         <ScrollReveal className="mt-10">
-          <div className="flex flex-wrap gap-3 overflow-x-auto pb-2 md:flex-nowrap md:overflow-x-auto">
+          <div className="flex flex-wrap justify-center gap-3 pb-2">
             {techTabs.map((tab) => {
               const TabIcon = resolveIcon(tab.icon)
               const isActive = tab.id === activeTab.id
@@ -139,7 +122,7 @@ export default function TechStack() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab)}
-                  className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition ${
+                  className={`inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition ${
                     isActive
                       ? 'border-green-500 bg-green-500 text-white shadow-[0_16px_34px_rgba(34,197,94,0.2)]'
                       : 'border-gray-200 bg-white text-gray-700 hover:border-green-300 hover:text-green-700'
@@ -153,7 +136,7 @@ export default function TechStack() {
           </div>
         </ScrollReveal>
 
-        <div className="mt-10 rounded-[2rem] border border-gray-200 bg-white/80 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.05)] backdrop-blur-sm md:p-8">
+        <div className="mt-8 rounded-[1.5rem] border border-gray-200 bg-white/80 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.05)] backdrop-blur-sm sm:mt-10 sm:rounded-[2rem] sm:p-6 md:p-8">
           <div className="mb-8 flex flex-col gap-4 border-b border-gray-200 pb-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-50 text-green-700 ring-1 ring-green-200">
@@ -164,7 +147,7 @@ export default function TechStack() {
                   {activeTab.label}
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">
-                  Modern tools selected to balance speed, scale, and maintainability.
+                  A focused toolset for reliable AI products and the systems around them.
                 </p>
               </div>
             </div>
@@ -180,7 +163,7 @@ export default function TechStack() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.98 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+              className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
             >
               {activeTab.techs.map((tech, index) => (
                 <TechCard key={tech.name} tech={tech} index={index} />

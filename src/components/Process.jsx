@@ -56,14 +56,15 @@ export default function Process() {
   }, [progressMV])
 
   return (
-    <section id="process" className="relative px-4 py-20 md:px-6 md:py-28">
+    <section id="process" aria-labelledby="process-heading" className="relative px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-green-600">
-            A Proven Path Towards AI Implementation
+            From problem to production
           </p>
           <SplitText
-            text="A Clear, Collaborative Journey to Success"
+            id="process-heading"
+            text="A senior engineer stays close to the problem."
             tag="h2"
             splitType="chars"
             delay={16}
@@ -71,9 +72,7 @@ export default function Process() {
             className="mx-auto block text-4xl font-bold tracking-[-0.04em] text-gray-950 md:text-5xl lg:text-6xl"
           />
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-            We guide you from initial concept to full implementation through a
-            structured and transparent process, ensuring alignment and value at every
-            stage.
+            The same person discussing business value can go deep on retrieval, APIs, architecture, reliability and deployment. Product and engineering decisions stay connected.
           </p>
         </div>
 

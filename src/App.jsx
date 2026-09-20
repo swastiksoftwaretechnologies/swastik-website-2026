@@ -6,18 +6,18 @@ import Hero from './components/Hero'
 import TrustStrip from './components/TrustStrip'
 import CTABreak from './components/CTABreak'
 import Benefits from './components/Benefits'
-import Testimonials from './components/Testimonials'
 import FAQs from './components/FAQs'
 import Footer from './components/Footer'
 import ContactModal from './components/ContactModal'
 import { ContactModalProvider } from './context/ContactModalContext'
 
-// Heavy components (OGL WebGL + GSAP-heavy) — lazy loaded once page paint is done
+// Below-fold components are lazy loaded once page paint is done.
 const Clients = lazy(() => import('./components/Clients'))
 const Services = lazy(() => import('./components/Services'))
 const TechStack = lazy(() => import('./components/TechStack'))
 const Process = lazy(() => import('./components/Process'))
 const Projects = lazy(() => import('./components/Projects'))
+const Founder = lazy(() => import('./components/Founder'))
 
 function SectionSkeleton({ height = 'h-48' }) {
   return (
@@ -50,9 +50,9 @@ export default function App() {
   return (
     <ContactModalProvider>
     <ContactModal />
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen min-w-0 overflow-x-clip">
       {/* Interactive dot grid — fixed behind all content, events fire on window */}
-      <div className="pointer-events-none fixed inset-0 -z-10 h-screen w-screen">
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 h-screen w-screen">
         <DotGrid
           dotSize={3}
           gap={22}
@@ -67,8 +67,9 @@ export default function App() {
         />
       </div>
 
+      <a href="#main-content" className="sr-only fixed left-4 top-4 z-[200] rounded-lg bg-white px-4 py-2 font-semibold text-green-700 shadow focus:not-sr-only">Skip to main content</a>
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex="-1">
         {/* Above-fold — load immediately */}
         <Hero />
         <TrustStrip />
@@ -83,22 +84,23 @@ export default function App() {
         </Suspense>
 
         <Suspense fallback={<SectionSkeleton height="h-96" />}>
-          <TechStack />
+          <Projects />
         </Suspense>
+
+        <Suspense fallback={<SectionSkeleton height="h-[760px]" />}>
+          <Founder />
+        </Suspense>
+        <Benefits />
 
         <Suspense fallback={<SectionSkeleton height="h-[700px]" />}>
           <Process />
         </Suspense>
 
         <Suspense fallback={<SectionSkeleton height="h-96" />}>
-          <Projects />
+          <TechStack />
         </Suspense>
-
-        <CTABreak variant="mid" />
-        <Benefits />
-        <Testimonials />
         <FAQs />
-        <CTABreak variant="final" id="about" />
+        <CTABreak variant="final" />
       </main>
       <Footer />
     </div>

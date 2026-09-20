@@ -137,14 +137,15 @@ export default function Services() {
   const { openModal } = useContactModal()
 
   return (
-    <section id="services" className="relative px-4 py-20 md:px-6 md:py-28">
+    <section id="services" aria-labelledby="services-heading" className="relative px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-green-600">
-            Services
+            Capabilities
           </p>
           <SplitText
-            text="What We Build"
+            id="services-heading"
+            text="Build the AI layer your business actually needs."
             tag="h2"
             splitType="chars"
             delay={25}
@@ -153,8 +154,7 @@ export default function Services() {
           />
           <ScrollReveal className="mx-auto mt-6 max-w-3xl">
             <p className="text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
-              Enterprise-grade architecture meets intuitive design. We deliver
-              end-to-end solutions that modernize your technical foundation.
+              We combine AI engineering, backend systems, cloud infrastructure and product development to build around your workflow - not force your workflow into a generic tool.
             </p>
           </ScrollReveal>
         </div>
@@ -204,7 +204,7 @@ export default function Services() {
             onClick={openModal}
             className="inline-flex items-center gap-2 text-base font-semibold text-green-700 transition hover:text-green-800"
           >
-            Have a project in mind? Let&apos;s talk <span aria-hidden="true">→</span>
+            Have a workflow that does not fit an off-the-shelf product? Schedule 15 minutes with Rushil.
           </button>
         </ScrollReveal>
       </div>

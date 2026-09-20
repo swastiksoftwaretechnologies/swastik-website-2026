@@ -46,7 +46,7 @@ function AccountTable({ showRisk }) {
   return (
     <div className="space-y-0.5 p-3 sm:p-4">
       {/* Header */}
-      <div className="mb-2 grid grid-cols-[minmax(0,1fr)_52px_46px_70px] gap-1.5 border-b border-white/8 px-1.5 pb-2 sm:grid-cols-[1fr_64px_56px_78px] sm:gap-2 sm:px-2">
+      <div className="mb-2 grid grid-cols-[minmax(0,1fr)_44px_38px_58px] gap-1 border-b border-white/8 px-1 pb-2 sm:grid-cols-[1fr_64px_56px_78px] sm:gap-2 sm:px-2">
         {['Account', 'Revenue', 'Δ QoQ', 'Status'].map((h) => (
           <span
             key={h}
@@ -61,7 +61,7 @@ function AccountTable({ showRisk }) {
       {ACCOUNTS.map((acc, i) => (
         <div
           key={acc.id}
-          className="grid grid-cols-[minmax(0,1fr)_52px_46px_70px] items-center gap-1.5 rounded-lg px-1.5 py-2.5 transition-colors hover:bg-white/[0.03] sm:grid-cols-[1fr_64px_56px_78px] sm:gap-2 sm:px-2"
+          className="grid grid-cols-[minmax(0,1fr)_44px_38px_58px] items-center gap-1 rounded-lg px-1 py-2.5 transition-colors hover:bg-white/[0.03] sm:grid-cols-[1fr_64px_56px_78px] sm:gap-2 sm:px-2"
         >
           {/* Name */}
           <div className="flex min-w-0 items-center gap-2 sm:gap-2.5">
@@ -238,7 +238,7 @@ function CommandBar({ state, typedText }) {
         </div>
 
         {/* Message area */}
-        <div className="flex min-h-[36px] flex-1 items-center">
+        <div className="flex min-w-0 min-h-[36px] flex-1 items-center">
           <AnimatePresence mode="wait">
             {state === 'IDLE' && (
               <motion.span
@@ -247,7 +247,7 @@ function CommandBar({ state, typedText }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.25 }}
-                className="font-mono text-xs italic text-white/20"
+                className="truncate font-mono text-xs italic text-white/20"
               >
                 Ask agent to run analysis, generate reports…
               </motion.span>
@@ -259,7 +259,7 @@ function CommandBar({ state, typedText }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="font-mono text-xs text-white/85"
+                className="truncate font-mono text-xs text-white/85"
               >
                 {typedText}
                 <span className="ml-0.5 inline-block h-3.5 w-0.5 animate-pulse bg-green-400 align-middle" />
@@ -273,7 +273,7 @@ function CommandBar({ state, typedText }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="font-mono text-xs italic text-white/25"
+                className="truncate font-mono text-xs italic text-white/25"
               >
                 Running analysis on accounts…
               </motion.span>
@@ -286,7 +286,7 @@ function CommandBar({ state, typedText }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="flex items-center gap-2"
+                className="flex min-w-0 items-center gap-2"
               >
                 <div className="flex h-4 w-4 items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-500/15">
                   <svg
@@ -299,7 +299,7 @@ function CommandBar({ state, typedText }) {
                     <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="font-mono text-xs text-emerald-400">
+                <span className="truncate font-mono text-xs text-emerald-400">
                   3 accounts flagged — report ready
                 </span>
               </motion.div>

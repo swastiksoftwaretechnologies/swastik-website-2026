@@ -6,12 +6,11 @@ import { useNavScroll } from '../hooks/useNavScroll'
 import { useContactModal } from '../context/ContactModalContext'
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Tech Stack', href: '#tech-stack' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Work', href: '#projects' },
+  { label: 'Capabilities', href: '#services' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Process', href: '#process' },
+  { label: 'FAQ', href: '#faq' },
 ]
 
 export default function Navbar() {
@@ -70,7 +69,7 @@ export default function Navbar() {
             </span>
           </button>
 
-          <nav className="hidden items-center gap-7 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -84,19 +83,19 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
               onClick={openModal}
               className="rounded-2xl px-5 py-3 shadow-[0_12px_32px_rgba(34,197,94,0.22)] hover:shadow-[0_18px_44px_rgba(34,197,94,0.28)]"
             >
-              Get in Touch
+              Schedule a Free 15-Min Call
             </Button>
           </div>
 
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-800 shadow-sm transition hover:border-green-300 hover:text-green-600 md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-800 shadow-sm transition hover:border-green-300 hover:text-green-600 lg:hidden"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
           >
@@ -107,7 +106,7 @@ export default function Navbar() {
 
       <div
         className={clsx(
-          'fixed inset-0 z-40 bg-slate-950/20 backdrop-blur-sm transition-opacity duration-300 md:hidden',
+          'fixed inset-0 z-40 bg-slate-950/20 backdrop-blur-sm transition-opacity duration-300 lg:hidden',
           mobileOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         )}
         onClick={() => setMobileOpen(false)}
@@ -115,7 +114,7 @@ export default function Navbar() {
 
       <aside
         className={clsx(
-          'fixed right-4 top-[5.5rem] z-50 w-[min(22rem,calc(100vw-2rem))] rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_24px_64px_rgba(15,23,42,0.18)] transition-all duration-300 md:hidden',
+          'fixed right-4 top-[5.5rem] z-50 w-[min(22rem,calc(100vw-2rem))] rounded-3xl border border-gray-200 bg-white p-5 shadow-[0_24px_64px_rgba(15,23,42,0.18)] transition-all duration-300 lg:hidden',
           mobileOpen ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0'
         )}
       >
@@ -142,7 +141,7 @@ export default function Navbar() {
           onClick={() => { setMobileOpen(false); openModal() }}
           className="mt-5 w-full justify-center rounded-2xl"
         >
-          Get in Touch
+          15 Minutes with Rushil
         </Button>
       </aside>
     </>

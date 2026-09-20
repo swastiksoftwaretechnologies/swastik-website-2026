@@ -19,7 +19,8 @@ const SplitText = ({
   rootMargin = '-100px',
   textAlign = 'center',
   tag = 'p',
-  onLetterAnimationComplete
+  onLetterAnimationComplete,
+  ...rest
 }) => {
   const ref = useRef(null);
   const animationCompletedRef = useRef(false);
@@ -153,7 +154,7 @@ const SplitText = ({
     const Tag = tag || 'p';
 
     return (
-      <Tag ref={ref} style={style} className={classes}>
+      <Tag ref={ref} style={style} className={classes} {...rest}>
         {text}
       </Tag>
     );

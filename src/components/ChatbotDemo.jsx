@@ -108,7 +108,11 @@ export default function ChatbotDemo() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white shadow-[0_22px_70px_rgba(15,23,42,0.06)]">
+      <div>
+        <p className="mb-3 text-xs leading-5 text-gray-500">
+          Interactive demo - illustrative conversation with sample data. No real client or patient records are shown.
+        </p>
+        <div className="overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white shadow-[0_22px_70px_rgba(15,23,42,0.06)]">
         <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-5 py-4">
           <div className="flex items-center gap-3">
             <div className="relative flex h-11 w-11 items-center justify-center rounded-full bg-green-100 text-green-700">
@@ -155,6 +159,7 @@ export default function ChatbotDemo() {
               <TypingIndicator />
             </div>
           )}
+        </div>
         </div>
       </div>
     </div>

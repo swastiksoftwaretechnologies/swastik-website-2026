@@ -1,32 +1,42 @@
 export const faqs = [
   {
-    question: 'What services do you offer?',
+    question: 'What kind of projects are a fit?',
     answer:
-      'We specialize in AI automation, custom software development, data analytics platforms, and AI-powered chatbots. Every solution is tailored to your specific business needs and technical requirements — no off-the-shelf packages.',
+      'Projects where AI has to work with proprietary data, operational workflows or domain-specific decisions - RAG, agents, multimodal systems, internal tools and custom AI SaaS are strong fits.',
   },
   {
-    question: 'How does your development process work?',
+    question: 'Do you only build prototypes?',
     answer:
-      'We follow a 5-stage process: Discovery, Strategy, Development, Implementation, and Review. This ensures alignment at every step and delivers solutions that genuinely solve your problems. You\'ll have full visibility at each stage.',
+      'No. The focus is production software: backend, APIs, data, auth, cloud deployment, testing, observability and product UX around the AI capability.',
   },
   {
-    question: 'What is the typical project timeline?',
+    question: 'Can you work with an existing product?',
     answer:
-      'Most projects range from 6–16 weeks depending on complexity. A simple AI chatbot might take 6–8 weeks, while a full-scale enterprise platform could take 12–16 weeks. We\'ll give you a clear timeline during the Strategy phase.',
+      'Yes. Many valuable projects are AI layers added to an existing CRM, workflow or data system rather than a new product from scratch.',
   },
   {
-    question: 'How do you handle pricing?',
+    question: 'Can you help define the solution before development?',
     answer:
-      'We provide custom quotes based on project scope, complexity, and timeline. No cookie-cutter packages — you pay for exactly what you need. We offer milestone-based billing so you\'re never locked into a lump-sum commitment.',
+      'Yes. The first job is usually turning a broad AI idea into a specific workflow, evaluation plan, architecture and first useful release.',
   },
   {
-    question: 'What technologies do you work with?',
+    question: 'What does the 15-minute consultation cover?',
     answer:
-      'Our stack includes React, Next.js, Python, FastAPI, Node.js, and leading AI frameworks like LangChain, PyTorch, and TensorFlow. We choose the right tools for your specific needs, not the other way around.',
+      'Bring one use case. We will quickly map the workflow, data, likely architecture, major risks and whether there is enough leverage to justify a build.',
   },
   {
-    question: 'Do you provide ongoing support after launch?',
+    question: 'Do you provide ongoing support?',
     answer:
-      'Absolutely. We offer ongoing maintenance, monitoring, and optimization packages. Your product doesn\'t stop at launch — we stay with you as your needs evolve and scale.',
+      'Yes - maintenance, monitoring, iteration and expansion can continue after launch depending on the product and engagement model.',
+  },
+  {
+    question: 'How long does a project take?',
+    answer:
+      'Timeline depends on integrations, data readiness and product scope. After the initial solution blueprint, you receive a realistic milestone plan rather than a generic "6-8 week" promise.',
+  },
+  {
+    question: 'How is pricing handled?',
+    answer:
+      'Pricing is scoped around the product, integrations and delivery plan. We use milestone-based commercial terms where appropriate rather than publishing generic packages.',
   },
 ]

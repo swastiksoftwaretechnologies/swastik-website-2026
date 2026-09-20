@@ -1,37 +1,37 @@
 export const processSteps = [
   {
     number: '01',
-    title: 'Discovery Call',
+    title: '15-Min Fit Call',
     description:
-      'Understand your business, pain points, and technical requirements in a focused 60-minute session.',
+      'We identify the workflow, value at stake, data constraints and whether AI is genuinely the right tool.',
     side: 'left',
   },
   {
     number: '02',
-    title: 'Strategy Meeting',
+    title: 'Solution Blueprint',
     description:
-      'Co-design your strategic roadmap and solution architecture with our senior engineers and AI specialists.',
+      'We define the user flow, data sources, model behavior, integrations, evaluation plan, guardrails and a realistic first release.',
     side: 'right',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Working Software Early',
     description:
-      'Build and refine your custom solution with agile sprints, weekly demos, and transparent progress tracking.',
+      'You see real workflows early. We test model behavior and product assumptions before polishing the wrong thing.',
     side: 'left',
   },
   {
     number: '04',
-    title: 'Implementation',
+    title: 'Production Engineering',
     description:
-      'Integrate the solution into your workflows with thorough testing, team training, and zero-downtime deployment.',
+      'We connect APIs, data stores, auth, telemetry, deployment and reliability around the AI layer.',
     side: 'right',
   },
   {
     number: '05',
-    title: 'Review',
+    title: 'Iterate on Evidence',
     description:
-      'Measure performance, gather feedback, and plan future evolution to keep your system ahead of the curve.',
+      'We measure quality on real tasks, fix failure modes and expand only after the core workflow is useful.',
     side: 'left',
   },
 ]

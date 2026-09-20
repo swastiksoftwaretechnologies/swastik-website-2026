@@ -77,7 +77,7 @@ export default function ProjectCard({ project, index, onSelect }) {
         rotateY,
         transformStyle: 'preserve-3d',
       }}
-      className="group relative overflow-hidden rounded-[2rem] border border-gray-200 bg-white p-7 text-left shadow-[0_24px_80px_rgba(15,23,42,0.06)]"
+      className="group relative overflow-hidden rounded-[1.5rem] border border-gray-200 bg-white p-5 text-left shadow-[0_24px_80px_rgba(15,23,42,0.06)] sm:rounded-[2rem] sm:p-7"
     >
       <motion.div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: spotlight }} />
       <div className={`inline-flex rounded-2xl border px-4 py-2 text-sm font-semibold ${project.accentClass} ${project.accentBorder}`}>
@@ -86,25 +86,30 @@ export default function ProjectCard({ project, index, onSelect }) {
       </div>
 
       <div className="relative z-10 mt-7">
-        <h3 className="text-3xl font-semibold tracking-tight text-gray-950">
+        <h3 className="text-2xl font-semibold tracking-tight text-gray-950 sm:text-3xl">
           {project.title}
         </h3>
         <p className="mt-4 max-w-sm text-base leading-7 text-gray-600">
           {project.shortDescription}
         </p>
 
+        <div className={`mt-5 rounded-2xl border px-4 py-3 ${project.accentClass} ${project.accentBorder}`}>
+          <p className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-green-700">{project.proof.eyebrow}</p>
+          <p className="mt-1 text-base font-bold leading-5 text-gray-950">{project.proof.headline}</p>
+        </div>
+
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className={`rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] ${project.accentClass} ${project.accentBorder}`}
+              className={`rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${project.accentClass} ${project.accentBorder}`}
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-between">
+        <div className="mt-8 flex items-center justify-between">
           <span className="text-sm font-semibold text-green-700">Click to explore</span>
           <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gray-950 text-white transition group-hover:bg-green-500">
             <ArrowRight size={18} />

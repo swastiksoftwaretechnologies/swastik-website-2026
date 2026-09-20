@@ -1,34 +1,42 @@
 export const services = [
   {
-    id: 'ai-automation',
+    id: 'ai-agents-automation',
     icon: 'Bot',
-    title: 'AI Automation',
+    title: 'AI Agents & Automation',
     description:
-      'Streamline operations with intelligent agents that handle repetitive tasks. Our automation pipelines reduce operational drag by up to 60%.',
+      'Agents that retrieve context, reason over business data, call tools and APIs, and take controlled actions inside existing systems.',
     mockupType: 'workflow',
   },
   {
-    id: 'custom-software',
-    icon: 'Code2',
-    title: 'Custom Software',
+    id: 'rag-knowledge-systems',
+    icon: 'MessageSquare',
+    title: 'RAG & Knowledge Systems',
     description:
-      'Scalable web and mobile applications built on modern tech stacks tailored to your exact business logic.',
+      'Source-grounded search, Q&A, report generation and document intelligence over proprietary knowledge, research, records and policies.',
+    mockupType: 'chat',
+  },
+  {
+    id: 'multimodal-ai',
+    icon: 'Bot',
+    title: 'Multimodal AI',
+    description:
+      'Voice, video and text systems - adaptive interviews, live transcription, evaluation, multimodal retrieval and context-aware assistants.',
+    mockupType: 'workflow',
+  },
+  {
+    id: 'custom-ai-saas',
+    icon: 'Code2',
+    title: 'Custom AI SaaS',
+    description:
+      'End-to-end product engineering: interface, APIs, backend, data layer, model integration, cloud deployment, observability and iteration.',
     mockupType: 'mobile',
   },
   {
-    id: 'data-analytics',
+    id: 'operational-workflows',
     icon: 'BarChart3',
-    title: 'Data Analytics',
+    title: 'AI for Operational Workflows',
     description:
-      'Transform complex datasets into clear, actionable business insights with custom dashboards and predictive modeling.',
+      'Embed AI directly into CRM, care, finance, travel or internal operations so conversation can trigger useful work rather than stop at an answer.',
     mockupType: 'chart',
-  },
-  {
-    id: 'ai-chatbots',
-    icon: 'MessageSquare',
-    title: 'Contextual AI Chatbots',
-    description:
-      'Deploy secure, custom LLM-powered assistants that understand your documentation and handle complex customer queries instantly.',
-    mockupType: 'chat',
   },
 ]

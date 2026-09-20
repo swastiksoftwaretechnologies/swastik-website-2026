@@ -68,13 +68,15 @@ export default function FAQs() {
   }
 
   return (
-    <section id="faq" className="relative px-4 py-20 md:px-6 md:py-28">
+    <section id="faq" aria-labelledby="faq-heading" className="relative px-4 py-20 md:px-6 md:py-28">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-green-600">
             FAQ
           </p>
           <SplitText
+            id="faq-heading"
             text="Frequently Asked Questions"
             tag="h2"
             splitType="chars"

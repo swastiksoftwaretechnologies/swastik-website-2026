@@ -11,7 +11,6 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom'],
           'vendor-framer': ['framer-motion'],
           'vendor-gsap': ['gsap', '@gsap/react'],
-          'vendor-ogl': ['ogl'],
         },
       },
     },

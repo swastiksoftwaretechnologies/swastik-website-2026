@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { Zap, Maximize2, PiggyBank, Lightbulb, Headphones, Shield, Sparkles } from 'lucide-react'
+import { Network, Lightbulb, UserRound, Workflow, Gauge, Plug, Sparkles } from 'lucide-react'
 import SplitText from './animations/SplitText'
 import { ScrollReveal } from './ui/ScrollReveal'
 import { benefits } from '../data/benefits'
 
-const ICON_MAP = { Zap, Maximize2, PiggyBank, Lightbulb, Headphones, Shield, Sparkles }
+const ICON_MAP = { Network, Lightbulb, UserRound, Workflow, Gauge, Plug, Sparkles }
 
 function resolveIcon(name) {
   return ICON_MAP[name] || Sparkles
@@ -12,14 +12,15 @@ function resolveIcon(name) {
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="relative px-4 py-20 md:px-6 md:py-28">
+    <section id="benefits" aria-labelledby="benefits-heading" className="relative px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-green-600">
-            Why us
+            Why work with us
           </p>
           <SplitText
-            text="Why Businesses Choose Us"
+            id="benefits-heading"
+            text="AI depth without losing software-engineering discipline."
             tag="h2"
             splitType="chars"
             delay={20}
@@ -28,8 +29,7 @@ export default function Benefits() {
           />
           <ScrollReveal className="mx-auto mt-6 max-w-3xl">
             <p className="text-lg leading-8 text-gray-600">
-              We combine deep technical expertise with a relentless focus on
-              business outcomes — so every solution we ship moves the needle.
+              The advantage is not access to a model API. It is knowing how to turn uncertain model behavior into a dependable product.
             </p>
           </ScrollReveal>
         </div>
