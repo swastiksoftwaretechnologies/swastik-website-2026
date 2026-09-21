@@ -20,7 +20,7 @@ export default function Founder() {
           <ScrollReveal className="rounded-[2rem] border border-gray-200 bg-gray-950 p-7 text-white shadow-[0_30px_90px_rgba(15,23,42,0.16)] md:p-9">
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-green-300">Founder</p>
             <h2 id="founder-heading" className="mt-5 text-4xl font-bold tracking-[-0.04em] md:text-5xl">Rushil Sanghavi</h2>
-            <p className="mt-2 text-lg text-white/65">Founder, Samvat AI</p>
+            <p className="mt-2 text-lg text-white/65">Founder, Exact Build</p>
             <blockquote className="mt-10 border-l-2 border-green-400 pl-5 text-xl font-medium leading-8 text-white/90">
               I have spent my career building systems where scale, reliability and intelligent decision-making are not optional.
             </blockquote>
@@ -44,7 +44,7 @@ export default function Founder() {
                 <div><h3 className="font-semibold text-gray-950">Engineering at scale</h3><p className="text-xs text-gray-500">Founder experience from Microsoft systems</p></div>
               </div>
               <p className="mt-5 text-sm leading-6 text-gray-600">At Microsoft, Rushil worked across Bing Search and Azure Database Migration Service. His systems processed 188M daily query triggers and evaluated 1.2B+ query-question pairs daily; he also built security-validation infrastructure executing 2.1B+ fuzz-test inputs, improved production availability to 99.975%, and shipped RAG/LLM-assisted developer workflows that reduced MTTR by about 26%.</p>
-              <p className="mt-4 text-xs font-medium leading-5 text-gray-500">These figures describe systems Rushil engineered at Microsoft. They are not Samvat AI client metrics.</p>
+              <p className="mt-4 text-xs font-medium leading-5 text-gray-500">These figures describe systems Rushil engineered at Microsoft. They are not Exact Build client metrics.</p>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">

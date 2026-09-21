@@ -36,12 +36,12 @@ export default function Footer() {
           <div>
             <button type="button" onClick={() => scrollTo('#home')} className="flex items-center gap-3 text-left" aria-label="Back to top">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500/12 ring-1 ring-green-500/20"><span className="h-3 w-3 rounded-full bg-green-500 shadow-[0_0_16px_rgba(34,197,94,0.5)]" /></span>
-              <span className="text-xl font-semibold tracking-tight text-gray-900">Samvat AI</span>
+              <span className="text-xl font-semibold tracking-tight text-gray-900">Exact Build</span>
             </button>
             <p className="mt-4 max-w-xs text-sm leading-6 text-gray-500">Serious AI engineering for workflows generic tools cannot solve.</p>
             <div className="mt-6 space-y-2.5">
               <a href="tel:+919820074233" className="flex items-center gap-2.5 text-sm text-gray-500 transition hover:text-green-600"><Phone size={14} className="shrink-0 text-green-500" />+91 98200 74233</a>
-              <a href="mailto:rushilksanghavi@gmail.com" className="flex items-center gap-2.5 text-sm text-gray-500 transition hover:text-green-600"><Mail size={14} className="shrink-0 text-green-500" />rushilksanghavi@gmail.com</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=swastiksoftwaretechnologies%40gmail.com" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 break-all text-sm text-gray-500 transition hover:text-green-600"><Mail size={14} className="shrink-0 text-green-500" />swastiksoftwaretechnologies@gmail.com</a>
             </div>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
             <button type="button" onClick={openModal} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-green-700 transition hover:text-green-800">Schedule a Free 15-Min Call <ArrowRight size={16} /></button>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-200 py-6"><p className="text-center text-xs text-gray-400">© 2026 Samvat AI. All rights reserved.</p></div>
+        <div className="mt-12 border-t border-gray-200 py-6"><p className="text-center text-xs text-gray-400">© 2026 Exact Build. All rights reserved.</p></div>
       </div>
     </footer>
   )

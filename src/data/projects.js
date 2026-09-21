@@ -4,7 +4,7 @@ export const projects = [
     title: 'HappierWork',
     hook: 'AI interviews that adapt in real time - and return recruiter-ready evidence.',
     shortDescription:
-      'An AI video interview system built for Searce that converts a job description into structured screening, runs live multimodal interviews with adaptive follow-ups, and produces evidence-backed evaluation for recruiters.',
+      'An AI interviewing SDK delivered for Searce that turns one job description into two tailored screening plans, runs live multimodal interviews with adaptive follow-ups, and returns recruiter-ready evaluation evidence.',
     accentColor: 'green',
     accentClass: 'bg-green-100 text-green-700',
     accentBorder: 'border-green-200',
@@ -25,19 +25,19 @@ export const projects = [
     capability:
       'Multimodal interviewing and evaluation - real-time audio and video handling, adaptive question generation, proctoring signals and rubric scoring in one pipeline. The output is not a recording for a human to review; it is structured evidence a recruiter can act on.',
     context:
-      'Delivered to Searce. The signed scope defines an AI video interview MVP designed to integrate with the happierWork HRMS.',
+      'Delivered to Searce for happierWork HRMS integration. Searce is a $1B+ company context, as provided by the client team.',
     techUsed: ['Multimodal LLMs', 'Speech-to-Text', 'Python', 'FastAPI', 'React', 'Cloud Deployment'],
     proof: {
-      eyebrow: 'Workflow design',
-      headline: '2 screening plans',
-      note: 'Logical/problem-solving and technical plans built around interview evidence.',
+      eyebrow: 'Enterprise client context',
+      headline: '$1B+ company context',
+      note: 'AI interviewing SDK delivered for Searce; includes two screening plans and recruiter-ready evidence.',
     },
     resourceLinks: [
       { label: 'View interview workflow', url: 'https://drive.google.com/file/d/1RLFztozzmz4pxi8WZHlBr-FkyTWcKYwn/view?usp=drivesdk' },
       { label: 'View evaluation summary', url: 'https://drive.google.com/file/d/1z6OrrymsHL_siONr62Q7BMOLLYq8-E1C/view?usp=drivesdk' },
     ],
     hasDemo: false,
-    cta: 'Building an AI workflow around hiring, assessment or expert evaluation? Schedule 15 minutes with Rushil.',
+    cta: 'Building an AI workflow around hiring, assessment or expert evaluation? Schedule a 15-minute build call.',
     disclosure:
       'Public copy stays at capability and product-outcome level. It does not include contract fees, confidential implementation detail or candidate data.',
   },
@@ -46,7 +46,7 @@ export const projects = [
     title: 'Quanfia',
     hook: 'Turn a financial research corpus into an analyst you can question.',
     shortDescription:
-      'A financial RAG and research platform developed for Torch Wealth Management, designed to generate structured company analysis and continue into source-grounded Q&A over a controlled knowledge base.',
+      "A financial RAG and research platform developed for Torch Wealth Management's ~$700M+ AUM context, designed to generate structured company analysis and continue into source-grounded Q&A over a controlled knowledge base.",
     accentColor: 'blue',
     accentClass: 'bg-blue-100 text-blue-700',
     accentBorder: 'border-blue-200',
@@ -70,20 +70,20 @@ export const projects = [
     proof: {
       eyebrow: 'Client context',
       headline: '~$700M+ AUM',
-      note: 'Torch Wealth Management scale; this is client context, not a Samvat delivery metric.',
+      note: 'Torch Wealth Management scale; this is client context, not an Exact Build delivery metric.',
     },
     resourceLinks: [
       { label: 'View Quanfia walkthrough', url: 'https://drive.google.com/file/d/10U2TO0nRHHldJCKyQb2g04_yApFPZSvY/view?usp=drivesdk' },
     ],
     hasDemo: false,
-    cta: 'Want proprietary knowledge to behave like an expert teammate? Schedule 15 minutes with Rushil.',
+    cta: 'Want proprietary knowledge to behave like an expert teammate? Schedule a 15-minute build call.',
   },
   {
     id: 'sensible-health',
     title: 'Sensible Health',
     hook: 'Run care operations by asking - not by hunting through screens.',
     shortDescription:
-      'A care-provider CRM with an embedded AI assistant for roster management, shift creation, shift notes, vital logs and operational workflows.',
+      'An Australian care-provider CRM where five AI actions handle roster management, shift creation, shift notes, vital logs and operational retrieval - designed with privacy and data-governance needs in mind.',
     accentColor: 'green',
     accentClass: 'bg-green-100 text-green-700',
     accentBorder: 'border-green-200',
@@ -101,26 +101,26 @@ export const projects = [
       'Retrieve rosters, records and operational information by asking for them',
     ],
     capability:
-      "The clearest example of the Samvat approach: the AI is not a separate chatbot. It is connected to the product's actions and data, so a conversation can actually move work forward.",
-    context: 'An operational SaaS product for disability and care providers.',
+      "The clearest example of the Exact Build approach: the AI is not a separate chatbot. It is connected to the product's actions and data, so a conversation can actually move work forward.",
+    context: 'An operational SaaS product for disability and care providers in Australia, designed around sensitive operational data and privacy-conscious workflows.',
     techUsed: ['LLM Integration', 'Workflow Automation', 'React', 'FastAPI', 'PostgreSQL'],
     proof: {
-      eyebrow: 'Operational scope',
+      eyebrow: 'Australian care workflow',
       headline: '5 core AI actions',
-      note: 'Shift coordination, availability, care notes, vital logs and operational retrieval inside one CRM.',
+      note: 'Shift coordination, availability, care notes, vital logs and retrieval inside one privacy-conscious CRM.',
     },
     resourceLinks: [
       { label: 'View CRM walkthrough', url: 'https://drive.google.com/file/d/1ycAx5NZOdffO6YbGJXun5QVO8JKE1GEW/view?usp=drivesdk' },
     ],
     hasDemo: true,
-    cta: 'If your team lives inside a repetitive operational workflow, schedule 15 minutes with Rushil.',
+    cta: 'If your team lives inside a repetitive operational workflow, schedule a 15-minute build call.',
   },
   {
     id: 'novavistaai',
     title: 'NovaVistaAI',
     hook: 'Make messy multi-supplier hotel inventory usable.',
     shortDescription:
-      'An AI-native hotel and room mapping platform that de-duplicates supplier inventory, standardises room-level information and produces cleaner data and content for travel platforms.',
+      'An AI-native hotel and room mapping platform used by three travel platforms to de-duplicate supplier inventory, standardise room-level information and produce cleaner data and content.',
     accentColor: 'amber',
     accentClass: 'bg-amber-100 text-amber-700',
     accentBorder: 'border-amber-200',
@@ -142,12 +142,12 @@ export const projects = [
       'Used by EaseMyTrip, ixigo and TBO. The solution was presented at Arabian Travel Market in Dubai.',
     techUsed: ['Entity Resolution', 'ML Matching', 'Python', 'Data Pipelines', 'Cloud Infrastructure'],
     proof: {
-      eyebrow: 'Data infrastructure',
-      headline: '4 data-quality operations',
-      note: 'Matching, normalisation, standardisation and enrichment across supplier feeds.',
+      eyebrow: 'Travel client context',
+      headline: '3 travel platforms',
+      note: 'Used by EaseMyTrip, ixigo and TBO for matching, normalisation, standardisation and enrichment.',
     },
     hasDemo: false,
-    cta: 'Have fragmented data that needs matching, enrichment or normalisation? Schedule 15 minutes with Rushil.',
+    cta: 'Have fragmented data that needs matching, enrichment or normalisation? Schedule a 15-minute build call.',
   },
 ]
 

@@ -51,7 +51,7 @@ export default function Hero() {
             className="mb-6"
           >
             <p className="w-fit max-w-full rounded-full border border-green-200/80 bg-white/80 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-green-800 shadow-[0_10px_30px_rgba(34,197,94,0.08)] backdrop-blur sm:px-5 sm:text-sm sm:tracking-[0.18em]">
-              Samvat AI &middot; Workflow-first delivery
+              Exact Build &middot; Workflow-first delivery
             </p>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="block"
             >
-              Your AI idea deserves
+              Make the workflow your advantage.
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 18, filter: 'blur(10px)' }}
@@ -70,7 +70,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
               className="mt-1 block min-w-0"
             >
-              <GradientText className="block max-w-full break-words">production-grade engineering.</GradientText>
+              <GradientText className="block max-w-full break-words">Build the AI around it.</GradientText>
             </motion.span>
           </h1>
 
@@ -81,7 +81,7 @@ export default function Hero() {
             variants={fadeUp}
             className="mt-8 max-w-2xl break-words text-base leading-7 text-gray-600 sm:text-lg sm:leading-8"
           >
-            I build custom AI software around real business workflows - from multimodal hiring and financial research to care operations and travel data infrastructure. Strategy, AI, backend and product delivery stay connected from the first architecture decision to deployment.
+            Exact Build turns high-value, repetitive work into production AI software. Across four products in hiring, financial research, Australian care and travel data, strategy, AI, backend and product delivery stay connected from the first architecture decision to launch.
           </motion.p>
 
           <motion.div
@@ -106,8 +106,8 @@ export default function Hero() {
             </Button>
           </motion.div>
           <div className="mt-6 max-w-2xl space-y-2 text-sm leading-6 text-gray-500">
-            <p className="font-medium text-gray-700">Microsoft-scale engineering. 3 AI research publications. Four AI products across hiring, finance, care and travel.</p>
-            <p>Bring one workflow, bottleneck or product idea. We will use 15 minutes to map the architecture, feasibility and fastest useful first release.</p>
+            <p className="font-medium text-gray-700">Built for teams whose work cannot stop at a generic AI demo.</p>
+            <p>Bring one workflow, bottleneck or product idea. In 15 minutes, we will map the leverage, feasibility and fastest useful first release.</p>
           </div>
         </div>
 

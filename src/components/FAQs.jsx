@@ -86,7 +86,7 @@ export default function FAQs() {
           />
           <ScrollReveal className="mx-auto mt-6 max-w-3xl">
             <p className="text-lg leading-8 text-gray-600">
-              Everything you need to know about working with Samvat AI. Don&apos;t
+              Everything you need to know about working with Exact Build. Don&apos;t
               see your question?{' '}
               <button
                 type="button"

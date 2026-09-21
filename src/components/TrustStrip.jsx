@@ -1,40 +1,34 @@
 import { motion } from 'framer-motion'
 
-const proofItems = [
-  'Microsoft Bing Search + Azure',
-  '1.2B+ query-question pairs evaluated daily',
-  '2.1B+ fuzz-test inputs executed',
-  '3 published research papers',
-  "IIT Jodhpur Director's Gold Medal",
+const deliveryPrinciples = [
+  'Start with the workflow',
+  'Respect the data boundary',
+  'Integrate with the real systems',
+  'Ship a useful first release',
 ]
 
 export default function TrustStrip() {
   return (
     <motion.section
-      aria-labelledby="founder-proof-heading"
+      aria-labelledby="delivery-heading"
       initial={{ opacity: 0, y: 18, filter: 'blur(10px)' }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      transition={{ duration: 0.7, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.7, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
       className="px-4 pb-10 md:px-6 md:pb-16"
     >
-      <div className="mx-auto max-w-7xl border-y border-gray-200/80 py-8 md:py-10">
-        <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.28em] text-green-600">
-          Founder engineering background
-        </p>
-        <h2 id="founder-proof-heading" className="sr-only">Founder engineering proof</h2>
-        <div className="flex flex-wrap justify-center gap-3">
-          {proofItems.map((item) => (
-            <span
-              key={item}
-              className="rounded-full border border-gray-200 bg-white/80 px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm backdrop-blur-sm"
-            >
-              {item}
-            </span>
+      <div className="mx-auto max-w-7xl border-y border-gray-200/80 py-7 md:py-9">
+        <div className="flex flex-col gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-green-600">Exact Build delivery</p>
+            <h2 id="delivery-heading" className="mt-1 text-lg font-semibold tracking-tight text-gray-950">AI that earns a place in the workflow.</h2>
+          </div>
+          <p className="max-w-xl text-sm leading-6 text-gray-500">The details matter: the data boundary, the people using it and the systems it has to work with.</p>
+        </div>
+        <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
+          {deliveryPrinciples.map((item) => (
+            <span key={item} className="rounded-full border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-600">{item}</span>
           ))}
         </div>
-        <p className="mx-auto mt-5 max-w-3xl text-center text-xs leading-5 text-gray-500">
-          Figures describe systems Rushil engineered at Microsoft. They are not Samvat AI client metrics.
-        </p>
       </div>
     </motion.section>
   )

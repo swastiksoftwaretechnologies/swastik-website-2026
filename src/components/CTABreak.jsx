@@ -84,11 +84,13 @@ export default function CTABreak({ variant = 'final' }) {
             </Button>
             <Button
               variant="ghost"
-              href="mailto:rushilksanghavi@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=swastiksoftwaretechnologies%40gmail.com"
+              target="_blank"
+              rel="noreferrer"
               className="justify-center rounded-2xl bg-white/80 px-8 py-4 text-base backdrop-blur-sm"
             >
               <Mail size={18} />
-              Email Rushil
+              Email Exact Build
             </Button>
           </motion.div>
         </ScrollReveal>

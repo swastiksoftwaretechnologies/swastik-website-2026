@@ -93,9 +93,10 @@ export default function ProjectCard({ project, index, onSelect }) {
           {project.shortDescription}
         </p>
 
-        <div className={`mt-5 rounded-2xl border px-4 py-3 ${project.accentClass} ${project.accentBorder}`}>
-          <p className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-green-700">{project.proof.eyebrow}</p>
-          <p className="mt-1 text-base font-bold leading-5 text-gray-950">{project.proof.headline}</p>
+        <div className={`mt-5 inline-flex max-w-full items-center gap-2 rounded-full border px-3 py-2 ${project.accentClass} ${project.accentBorder}`}>
+          <span className="text-sm font-bold tracking-tight text-gray-950">{project.proof.headline}</span>
+          <span className="h-1 w-1 shrink-0 rounded-full bg-current opacity-50" />
+          <span className="truncate text-xs font-semibold">{project.proof.eyebrow}</span>
         </div>
 
         <div className="mt-6 flex flex-wrap gap-2">

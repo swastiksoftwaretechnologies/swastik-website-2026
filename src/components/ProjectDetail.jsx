@@ -9,9 +9,16 @@ const allTabs = [
   { id: 'capability', label: 'Capability', icon: Lightbulb },
 ]
 
+const architectureStages = [
+  { id: 'product', label: 'Product interface', detail: 'The workflow is designed around the people making the decision or completing the task.' },
+  { id: 'workflow', label: 'APIs and workflows', detail: 'Reliable orchestration connects the interface, business rules, integrations and permissions.' },
+  { id: 'ai', label: 'AI and data layer', detail: 'Models, retrieval and data pipelines are selected for the specific task - with evaluation and observability built in.' },
+]
+
 export default function ProjectDetail({ project, onBack }) {
   const tabs = project.hasDemo ? allTabs : allTabs.filter((tab) => tab.id !== 'demo')
   const [activeTab, setActiveTab] = useState(tabs[0].id)
+  const [activeArchitectureStage, setActiveArchitectureStage] = useState('product')
 
   const renderHowItWorks = () => (
     <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
@@ -44,12 +51,13 @@ export default function ProjectDetail({ project, onBack }) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-green-600">Architecture</p>
           <div className="mt-4 rounded-[1.4rem] border border-gray-200 bg-[linear-gradient(135deg,#f8fafc,#ffffff)] p-5">
             <div className="grid gap-3 text-center text-xs font-semibold sm:grid-cols-3">
-              <div className="rounded-2xl bg-green-50 px-3 py-3 text-green-700">Product interface</div>
-              <div className="rounded-2xl bg-gray-100 px-3 py-3 text-gray-700">APIs and workflows</div>
-              <div className="rounded-2xl bg-gray-950 px-3 py-3 text-white">AI and data layer</div>
+              {architectureStages.map((stage) => {
+                const active = activeArchitectureStage === stage.id
+                return <button key={stage.id} type="button" onClick={() => setActiveArchitectureStage(stage.id)} aria-pressed={active} className={`rounded-2xl px-3 py-3 text-center transition ${active ? 'bg-gray-950 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-700'}`}>{stage.label}</button>
+              })}
             </div>
           </div>
-          <p className="mt-3 text-xs leading-5 text-gray-500">Illustrative product architecture.</p>
+          <p className="mt-3 text-xs leading-5 text-gray-500">{architectureStages.find((stage) => stage.id === activeArchitectureStage)?.detail}</p>
         </div>
 
         <div className="rounded-[1.75rem] border border-gray-200 bg-white p-6 shadow-sm">
