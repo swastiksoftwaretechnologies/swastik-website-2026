@@ -26,7 +26,13 @@ body {
 }
 
 #root {
+  width: 100%;
   min-width: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
 }
 
 

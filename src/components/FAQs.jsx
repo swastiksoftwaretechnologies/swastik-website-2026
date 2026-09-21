@@ -28,7 +28,7 @@ function FAQItem({ faq, isOpen, onToggle, index }) {
         }`}
         aria-expanded={isOpen}
       >
-        <span className="flex-1 text-base font-semibold leading-7 text-gray-950">
+        <span className="min-w-0 flex-1 text-base font-semibold leading-7 text-gray-950">
           {faq.question}
         </span>
         <motion.span
